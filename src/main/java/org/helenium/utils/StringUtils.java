@@ -155,9 +155,10 @@ public class StringUtils {
      */
     public static String truncate(final String pString, final int pLength, final char pCharacter) {
 
+    	final StringBuffer sb = new StringBuffer();
+    	
         // If the string is null or empty
         if (pString == null || pString.isEmpty()) {
-            final StringBuffer sb = new StringBuffer();
             for (int i = 0; i < pLength; i++) {
                 sb.append(pCharacter);
             }
@@ -165,7 +166,6 @@ public class StringUtils {
         }
         // If the string's length is lower than expected
         if (pString.length() < pLength) {
-            final StringBuffer sb = new StringBuffer();
             sb.append(pString);
             int sbLength;
             for (sbLength = sb.length(); sbLength <= pLength; sbLength++) {
@@ -175,12 +175,10 @@ public class StringUtils {
         }
         // If the string's length is equal to what expected
         if (pString.length() == pLength) {
-            final StringBuffer sb = new StringBuffer();
             sb.append(pString);
             return sb.toString();
         } else {
             // If the string's length is higher than what expected
-            final StringBuffer sb = new StringBuffer();
             final String truncatedString = pString.substring(0, pLength);
             sb.append(truncatedString);
             return sb.toString();
