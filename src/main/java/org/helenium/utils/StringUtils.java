@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 public class StringUtils {
 	
 	/**
-	 * Utility class, do not instaciate
+	 * Utility class, do not instanciate
 	 */
 	private StringUtils(){
 
