@@ -12,12 +12,46 @@
 	<artifactId>helenium-utils</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>helenium-utils</name>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>The helenium-utils project is initiated to provide a common reusable Java utils classes.</description>
 	<url>http://www.helenium.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<licenses>
+		<license>
+			<name>GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007</name>
+			<url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Walid Ammou</name>
+			<email>w.ammou@helenium.org</email>
+			<organization>Helenium</organization>
+			<organizationUrl>http://www.helenium.org</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/wammou/helenium-utils.git</connection>
+		<developerConnection>scm:git:ssh://github.com:wammou/helenium-utils.git</developerConnection>
+		<url>https://github.com/wammou/helenium-utils/tree/master</url>
+	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
